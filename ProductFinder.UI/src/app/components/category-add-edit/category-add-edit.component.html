@@ -1,0 +1,18 @@
+<div mat-dialog-title>
+    <h1>Category Form</h1>
+</div>
+<form [formGroup]="categoryForm" (ngSubmit)="onFormSubmit()">
+<div mat-dialog-content class="content">
+    <div class="row">
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" placeholder="Ex. Notebooks" formControlName="name">
+        </mat-form-field>
+    </div>
+    
+</div>
+<div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" [mat-dialog-close]="false"> Cancel</button>
+    <button mat-raised-button color="primary" type="submit"> {{data ? 'Update' : 'Add'}} </button>
+</div>
+</form>
